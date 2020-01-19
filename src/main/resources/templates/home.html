@@ -1,15 +1,20 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
     <title>Taco Cloud</title>
 </head>
 <body>
-    <h1>Welcome to...</h1>
-    <p>I am the bests</p>
-    <img th:src="@{/images/TacoCloud.jpeg}"/>
+
+<h1>Welcome to...</h1>
+<p th:text="'my name es ' + ${myName}" class="funny"></p>
+<p>I am the bests</p>
+<img th:src="@{/images/TacoCloud.jpeg}" alt="taco cloud logo"/>
+
 </body>
 </html>
